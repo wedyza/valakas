@@ -97,7 +97,7 @@ for i in range(9999):
 print(c, eq)
 """
 #19-21
-
+"""
 def f(x, p):
     if x >= 50:
         if x <= 70:
@@ -112,4 +112,5 @@ def f(x, p):
 for s in range(1,50):
     if f(s, 1):
         print(s)
+"""
 
