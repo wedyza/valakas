@@ -10,19 +10,17 @@ for x in range(2):
 """
 #5
 """
-for x in range(1000):
-    n = bin(x)[2:]
-    n += "10" if x % 2 == 0 else "01"
-    n = int(n,2)
-    if n > 516:
-        print(x)
-        break
+x = int(input())
+n = bin(x)[2:]
+if x % 2 == 1:
+    n = "1" + n
+n += "10" if x % 2 == 0 else "01"
+print(int(n,2))
 """
-
 #6
-"""
+
 for i in range(10000):
-    s = i
+    s = i // 5
     n = 8
     while s < 156:
         if (s+n) % 3 == 0:
@@ -30,7 +28,7 @@ for i in range(10000):
         n += 11
     if n == 140:
         print(i)
-"""
+
 #8
 """
 word = "ЕКЛОСТ"
