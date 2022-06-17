@@ -18,7 +18,7 @@ n += "10" if x % 2 == 0 else "01"
 print(int(n,2))
 """
 #6
-
+"""
 for i in range(10000):
     s = i // 5
     n = 8
@@ -28,7 +28,7 @@ for i in range(10000):
         n += 11
     if n == 140:
         print(i)
-
+"""
 #8
 """
 word = "ЕКЛОСТ"
@@ -144,25 +144,24 @@ print(f(2,15,0)*f(15,30,0)*f(30,38,0))
 print(f(2,5,0), f(15,30,0))
 """
 #24
-"""
+
 f = open("24-1.txt")
 x = f.readline()
 x = x.replace("A","1")
 x = x.replace("B", "1")
 x = x.replace("X", "1")
 
-x = x.split("1")
-
-
 maxlen = 0
 
-
-for i in range(len(x)-4):
-    current = len(x[i] + x[i+1] + x[i+2] + x[i+3] + x[i+4])
-    maxlen = max(maxlen, current)
+for i in range(len(x)):
+    for j in range(i+1,len(x)):
+        if len(x[i:j]) < maxlen:
+            break
+        if x[i:j].count("1") <= 5:
+            maxlen = max(maxlen, len(x[i:j]))
 
 print(maxlen)
-"""
+
 #25
 """
 for n1 in range(10):
@@ -173,7 +172,7 @@ for n1 in range(10):
             print(num, num // 17)
 """
 #27
-
+"""
 f = open("27-98b.txt")
 string = f.readline().split()
 n = int(string[0])
@@ -197,7 +196,7 @@ for h in range(n):
         if flag == 0:
             maxlen = min(maxlen, len(srez))
 print(maxlen)
-
+"""
 
 
 
